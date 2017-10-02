@@ -39,8 +39,13 @@ done
 : ${LON:?'Oops! LON is not defined!?'}
 : ${LAT:?'Oops! LAT is not defined!?'}
 
+
 source settings.sh
-curl -H "Content-Type: application/json" -X GET $IUCN_ES_HOST/$IUCN_ES_INDEX -d '_search
+
+echo $IUCN_ES_HOST
+echo $IUCN_ES_INDEX
+
+curl -H "Content-Type: application/json" -X GET $IUCN_ES_HOST/$IUCN_ES_INDEX/world/_search -d '
 {
     "query":{
         "bool": {
@@ -52,7 +57,7 @@ curl -H "Content-Type: application/json" -X GET $IUCN_ES_HOST/$IUCN_ES_INDEX -d 
                     "location": {
                         "shape": {
                             "type": "point",
-                            "coordinates" : [LON,LAT]
+                            "coordinates" : [2.1,10.4]
                         },
                         "relation": "within"
                     }
@@ -60,5 +65,4 @@ curl -H "Content-Type: application/json" -X GET $IUCN_ES_HOST/$IUCN_ES_INDEX -d 
             }
         }
     }
-}
-'
+}'
