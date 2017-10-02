@@ -11,11 +11,17 @@ do
     --label)
       LABEL=$2
       shift;;
-    --lon)
-      LON=$2
+    --lon_min)
+      LON_MIN=$2
       shift;;
-    --lat)
-      LAT=$2
+    --lon_max)
+      LON_MAX=$2
+      shift;;
+    --lat_min)
+      LAT_MIN=$2
+      shift;;
+    --lat_max)
+      LAT_MAX=$2
       shift;;
     --radius)
       RADIUS=$2
@@ -36,8 +42,10 @@ do
 done
 
 # Sanity-check:
-: ${LON:?'Oops! LON is not defined!?'}
-: ${LAT:?'Oops! LAT is not defined!?'}
+: ${LON_MIN:?'Oops! LON_MIN is not defined!?'}
+: ${LAT_MIN:?'Oops! LAT_MIN is not defined!?'}
+: ${LON_MAX:?'Oops! LON_MAX is not defined!?'}
+: ${LAT_MAX:?'Oops! LAT_MAX is not defined!?'}
 
 source settings.sh
 curl -H "Content-Type: application/json" -X GET $IUCN_ES_HOST/$IUCN_ES_INDEX -d '_search
@@ -51,8 +59,8 @@ curl -H "Content-Type: application/json" -X GET $IUCN_ES_HOST/$IUCN_ES_INDEX -d 
                 "geo_shape": {
                     "location": {
                         "shape": {
-                            "type": "point",
-                            "coordinates" : [LON,LAT]
+                            "type": "envelope",
+                            "coordinates" : [[LON_MIN,LAT_MIN],[LON_MAX,LAT_MAX]]
                         },
                         "relation": "within"
                     }
