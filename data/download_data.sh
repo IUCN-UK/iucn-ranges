@@ -4,3 +4,7 @@ wget http://parietal-outbox.s3.amazonaws.com/world.dbf
 wget http://parietal-outbox.s3.amazonaws.com/world.prj
 wget http://parietal-outbox.s3.amazonaws.com/world.shx
 wget http://parietal-outbox.s3.amazonaws.com/world.geojson
+wget http://parietal-outbox.s3.amazonaws.com/TERRESTRIAL_MAMMALS.shp
+wget http://parietal-outbox.s3.amazonaws.com/TERRESTRIAL_MAMMALS.dbf
+wget http://parietal-outbox.s3.amazonaws.com/TERRESTRIAL_MAMMALS.shx
+wget http://parietal-outbox.s3.amazonaws.com/TERRESTRIAL_MAMMALS.prj
