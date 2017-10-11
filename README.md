@@ -3,7 +3,11 @@
 1. Multipart -> Single Part
 2. Run each single polygon through `prepair`
 3. Handle Seg. faults (fix_iucn_polygons.py)
-3. Dissolve back to multipart
+4. Dissolve back to multipart
+
+Note:
+-----
+5. Modify polyfix.py to point to your `prepair` location.
 
 ##  Elastic Search
 
