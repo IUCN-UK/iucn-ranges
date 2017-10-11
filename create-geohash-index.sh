@@ -2,6 +2,20 @@ echo "Creating $IUCN_ES_INDEX in $IUCN_ES_HOST"
 curl -XPUT $IUCN_ES_HOST/$IUCN_ES_INDEX -d '
 {
   "mappings": {
+    "world": {
+      "properties": {
+        "FIPS": {
+          "type": "string"
+        },
+        "ISO2": {
+          "type": "string"
+        },
+        "location": {
+          "type": "geo_shape",
+          "precision": 7
+        }
+      }
+    },
     "animals": {
       "properties": {
         "id_no": {
