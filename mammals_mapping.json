@@ -47,24 +47,6 @@
                   }
                 }
               },
-              "class_name" : {
-                "type" : "text",
-                "fields" : {
-                  "keyword" : {
-                    "type" : "keyword",
-                    "ignore_above" : 256
-                  }
-                }
-              },
-              "code" : {
-                "type" : "text",
-                "fields" : {
-                  "keyword" : {
-                    "type" : "keyword",
-                    "ignore_above" : 256
-                  }
-                }
-              },
               "compiler" : {
                 "type" : "text",
                 "fields" : {
@@ -83,55 +65,10 @@
                   }
                 }
               },
-              "family_nam" : {
-                "type" : "text",
-                "fields" : {
-                  "keyword" : {
-                    "type" : "keyword",
-                    "ignore_above" : 256
-                  }
-                }
-              },
-              "genus_name" : {
-                "type" : "text",
-                "fields" : {
-                  "keyword" : {
-                    "type" : "keyword",
-                    "ignore_above" : 256
-                  }
-                }
-              },
               "id_no" : {
                 "type" : "float"
               },
-              "island" : {
-                "type" : "text",
-                "fields" : {
-                  "keyword" : {
-                    "type" : "keyword",
-                    "ignore_above" : 256
-                  }
-                }
-              },
-              "kingdom_na" : {
-                "type" : "text",
-                "fields" : {
-                  "keyword" : {
-                    "type" : "keyword",
-                    "ignore_above" : 256
-                  }
-                }
-              },
               "legend" : {
-                "type" : "text",
-                "fields" : {
-                  "keyword" : {
-                    "type" : "keyword",
-                    "ignore_above" : 256
-                  }
-                }
-              },
-              "order_name" : {
                 "type" : "text",
                 "fields" : {
                   "keyword" : {
